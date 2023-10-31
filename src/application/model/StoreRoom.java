@@ -4,24 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StoreRoom {
-    private static Integer id = 0 ;
     private Integer storeRoomId ;
     private Double storeRoomArea ;
     private List<Shelf> shelves ;
 
-    public StoreRoom(Double storeRoomArea) {
-        id += 1;
-        this.storeRoomId =id ;
+    public StoreRoom(Integer storeRoomId , Double storeRoomArea) {
+        this.storeRoomId =storeRoomId ;
         this.storeRoomArea = storeRoomArea;
         this.shelves = new ArrayList<>();
-    }
-
-    public static Integer getId() {
-        return id;
-    }
-
-    public static void setId(Integer id) {
-        StoreRoom.id = id;
     }
 
     public Integer getStoreRoomId() {
@@ -46,5 +36,14 @@ public class StoreRoom {
 
     public void setShelves(Shelf shelve) {
         shelves.add(shelve);
+    }
+
+    @Override
+    public String toString() {
+        return "StoreRoom{" +
+                "storeRoomId=" + storeRoomId +
+                ", storeRoomArea=" + storeRoomArea +
+                ", shelves=" + shelves +
+                '}';
     }
 }
