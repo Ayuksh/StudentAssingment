@@ -25,6 +25,21 @@ public class InventoryTest {
         inventory.add(storeRoom1);
     }
 
+    static {
+        StoreRoom storeRoom2 = new StoreRoom(2 , 150.00);
+        Shelf shelf1 = new Shelf(1 , storeRoom2 , 200.00);
+        shelf1.setParts(new Parts(7 , 11.53));
+        shelf1.setParts(new Parts(8 , 14.56));
+        Shelf shelf2 = new Shelf(2 , storeRoom2 , 200.00);
+        shelf2.setParts(new Parts(9 , 12.50));
+        shelf2.setParts(new Parts(10 , 19.57));
+        shelf2.setParts(new Parts(11 , 23.54));
+        shelf2.setParts(new Parts(12 , 7.90));
+        storeRoom2.setShelves(shelf1);
+        storeRoom2.setShelves(shelf2);
+        inventory.add(storeRoom2);
+    }
+
     public static List<StoreRoom> getInventory() {
         return inventory;
     }
