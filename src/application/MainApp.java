@@ -1,13 +1,12 @@
 package application;
 
-import application.repository.InventoryTest;
 import application.service.Operations;
 import application.service.OperationsImpl;
 
 import java.util.Scanner;
 
 public class MainApp {
-    private static Operations operations = new OperationsImpl();
+    private static final Operations operations = new OperationsImpl();
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
